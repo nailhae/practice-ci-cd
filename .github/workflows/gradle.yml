@@ -22,6 +22,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      # List files to debug
+    - name: List files in workspace
+      run: ls -la
     - name: Grant execute permission to Gradle Wrapper
       run: chmod +x gradlew
     - name: Set up JDK 21
